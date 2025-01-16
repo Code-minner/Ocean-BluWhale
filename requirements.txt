@@ -1,0 +1,8 @@
+Flask==2.3.2
+Flask-WTF==1.1.1           # For forms
+Flask-SQLAlchemy==3.0.5    # For database integration
+Flask-Migrate==4.0.5       # For database migrations
+Flask-Login==0.6.3         # For user authentication
+Flask-Mail==0.9.1          # For sending emails
+requests==2.31.0           # For Paystack API integration
+gunicorn==20.1.0           # For deployment (optional)

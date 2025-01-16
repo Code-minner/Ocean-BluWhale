@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" section="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section_one">
+
+            <div class="announcement-bar">
+                🚀 FREE Express Shipping on Orders Over $299 | 30-Day Money Back Guarantee
+            </div>
+
+            <header>
+
+                <div class="header_sub">
+
+
+                    <div class="logo">
+                        <a href="{{ url_for('main.home') }}">
+                            <img src="{{ url_for('static', filename='img/logo_blue_o.png') }}" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="search_bar">
+                        <input type="text" placeholder="Search for security products...">
+                        <i class="bx bx-search"></i>
+                    </div>
+
+                    <div class="nav_bar" id="navbar">
+
+                        <nav>
+                            <ul>
+
+                                <li>
+                                    <a href="{{ url_for('main.shop') }}">Products</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.about') }}">About Us</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.contact') }}">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+
+              
+                    <div class="bar_icon_box">
+
+                        <div class="bar" onclick="toggleNavBar()">
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                        </div>
+
+                        <div class="icon_box">
+                            <a href="{{ url_for('main.cart') }}">
+                                <i class='bx bx-cart Cart_icon' id="Cart_icon" data-quantity="0"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+            <div class="section_one_sub">
+
+                <div class="section_one_sub_container">
+
+                    <div class="section_one_sub_container_text">
+                        <h2> Shop</h2>
+
+                        <div class="section_one_sub_container_text_sub">
+                            <a href="{{ url_for('main.home') }}">Home |</a>
+                            <a href="{{ url_for('main.about') }}"> About</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+   
+
+
+
+
+        <footer>
+
+            <div class="foot_sub">
+
+                <div class="foot_suber">
+                    <ul>
+                        <h3>Quick Links</h3>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span class="linking">Home</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>cart</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Us</span></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="foot_suber">
+                    <ul>
+                        <h3>Popular Links</h3>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Home</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Services</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Blog</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Uss</span></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="foot_suber">
+                    <h3>Get In Touch</h3>
+
+                    <p><i class='bx bx-map'></i>123 Street, New York, USA</p>
+                    <p><i class='bx bx-envelope-open'></i>info@example.com</p>
+                    <p><i class='bx bxs-phone'></i>+012 345 67890</p>
+                </div>
+
+                <div class="foot_suber">
+
+                    <h3>Follow US</h3>
+
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-linkedin'></i>
+                    <i class='bx bxl-instagram'></i>
+
+                </div>
+
+            </div>
+
+            <div class="foot_leg">
+
+                <p>© <span>Ocean Bluwhale</span>. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+
+<script src="{{ url_for('static', filename='script/cart.js')}}"></script>
+<script src="{{ url_for('static', filename='script/script.js')}}"></script>
+
+</html>

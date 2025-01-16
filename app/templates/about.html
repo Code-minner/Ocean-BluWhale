@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" section="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/abouut.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section_one">
+
+            <div class="announcement-bar">
+                🚀 FREE Express Shipping on Orders Over $299 | 30-Day Money Back Guarantee
+            </div>
+
+            <header>
+
+                <div class="header_sub">
+
+
+                    <div class="logo">
+                        <a href="{{ url_for('main.home') }}">
+                            <img src="{{ url_for('static', filename='img/logo_blue_o.png') }}" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="search_bar">
+                        <input type="text" placeholder="Search for security products...">
+                        <i class="bx bx-search"></i>
+                    </div>
+
+                    <div class="nav_bar" id="navbar">
+
+                        <nav>
+                            <ul>
+
+                                <li>
+                                    <a href="{{ url_for('main.shop') }}">Products</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.about') }}">About Us</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.contact') }}">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+
+                 
+                    <div class="bar_icon_box">
+
+                        <div class="bar" onclick="toggleNavBar()">
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                        </div>
+
+                        <div class="icon_box">
+                            <a href="{{ url_for('main.cart') }}">
+                                <i class='bx bx-cart Cart_icon' id="Cart_icon" data-quantity="0"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="section_one_sub">
+
+                <div class="section_one_sub_container">
+
+                    <div class="section_one_sub_container_text">
+                        <h2> About Us</h2>
+
+                        <div class="section_one_sub_container_text_sub">
+                            <a href="{{ url_for('main.home') }}">Home |</a>
+                            <a href="{{ url_for('main.shop') }}"> Shop</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="section_two">
+
+            <div class="section_two_sub">
+
+                <div class="section_two_sub_container">
+
+                    <div class="section_two_sub_container_content_one">
+                        <h2>About Us</h2>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In accusamus, eligendi ex, amet
+                            nobis dignissimos doloribus veritatis esse quis ea corrupti eius deleniti porro eaque
+                            ratione aliquid aperiam unde iste?</p>
+
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias saepe placeat, autem vitae a,
+                            modi obcaecati nobis aliquam perferendis non sed quam id. Itaque autem odio quia nulla.</p>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis nostrum mollitia atque ut
+                            excepturi, neque quasi porro consequuntur eveniet dicta ipsam sapiente veniam placeat
+                            facilis rem eaque eligendi. Molestiae, rem modi deserunt cumque quae dolores?</p>
+                    </div>
+
+                    <div class="section_two_sub_container_content_two">
+
+                        <div class="section_two_sub_container_content_two_sub">
+                            <img src="{{ url_for('static', filename='img/medal_1851036.png')}}" alt="">
+                            <div>
+                                <h3>Exclusive design</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem beatae pariatur sunt
+                                    dignissimos possimus? Quasi.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_two_sub_container_content_two_sub">
+                            <img src="{{ url_for('static', filename='img/medal_1851036.png')}}" alt="">
+                            <div>
+                                <h3>Exclusive design</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem beatae pariatur sunt
+                                    dignissimos possimus? Quasi.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_two_sub_container_content_two_sub">
+                            <img src="{{ url_for('static', filename='img/medal_1851036.png')}}" alt="">
+                            <div>
+                                <h3>Exclusive design</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem beatae pariatur sunt
+                                    dignissimos possimus? Quasi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_two_sub_container_content_three_img">
+                        <img src="{{ url_for('static', filename='img/video-doorbell-camera-floating-2-removebg-preview.png')}}" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="swiper_container_testimonial">
+            <div class="swiper_content_tes">
+                <div class="swiper-wrapper">
+                    <!-- Testimonials -->
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <img src="img/Image.png" alt="John Doe">
+                            <div class="author">John Doe</div>
+
+                            <div class="content">"This product has completely transformed our business operations. The
+                                efficiency gains are remarkable!"</div>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <img src="img/Image (1).png" alt="Jane Smith">
+                            <div class="author">Jane Smith</div>
+
+                            <div class="content">"The customer support is outstanding. They've been incredibly
+                                responsive throughout."</div>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <img src="img/Image (2).png" alt="Mike Johnson">
+                            <div class="author">Mike Johnson</div>
+
+                            <div class="content">"As a small business owner, this solution has been a game-changer. It's
+                                user-friendly!"</div>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <img src="img/Image (3).png" alt="Sarah Williams">
+                            <div class="author">Sarah Williams</div>
+
+                            <div class="content">"The features and functionality exceeded our expectations. Highly
+                                recommended!"</div>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <img src="img/images" alt="David Lee">
+                            <div class="author">David Lee</div>
+
+                            <div class="content">"The integration process was seamless. The team's support made
+                                everything easy."</div>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section_why_us">
+
+            <div class="section_why_us_sub">
+
+                <div class="section_Product_display_sub_header">
+
+
+                    <h2>Why Choose Us?</h2>
+                    <p>Explore our wide range of cutting-edge security gadgets designed to keep you safe and
+                        informed.</p>
+                </div>
+
+
+                <div class="section_why_us_sub_container block">
+
+                    <div class="section_why_us_sub_container_content block">
+
+                        <div class="section_why_us_sub_container_content_img">
+                            <img src="{{ url_for('static', filename='img/medal_1851036.png')}}" alt="">
+                        </div>
+
+
+                        <div class="section_why_us_sub_container_content_text">
+                            <h3>Top-Quality Products</h3>
+
+                            <p>We offer only the best security gadgets, ensuring durability, reliability, and
+                                cutting-edge technology.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="section_why_us_sub_container_content block">
+
+                        <div class="section_why_us_sub_container_content_img">
+                            <img src="{{ url_for('static', filename='img/price-removebg-preview.png')}}" alt="">
+                        </div>
+
+
+                        <div class="section_why_us_sub_container_content_text">
+                            <h3>Affordable Prices</h3>
+
+                            <p>Enjoy premium security solutions at competitive prices without compromising on
+                                quality.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="section_why_us_sub_container_content block">
+
+                        <div class="section_why_us_sub_container_content_img">
+                            <img src="{{ url_for('static', filename='img/delivery-removebg-preview.png')}}" alt="">
+                        </div>
+
+
+                        <div class="section_why_us_sub_container_content_text">
+                            <h3>Fast and Secure Shipping</h3>
+
+                            <p>Get your gadgets delivered quickly and safely to your doorstep, no matter where you
+                                are.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+
+            <div class="foot_sub">
+
+                <div class="foot_suber">
+                    <ul>
+                        <h3>Quick Links</h3>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span class="linking">Home</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>cart</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Us</span></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="foot_suber">
+                    <ul>
+                        <h3>Popular Links</h3>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Home</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Services</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Blog</span></a></li>
+                        <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Uss</span></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="foot_suber">
+                    <h3>Get In Touch</h3>
+
+                    <p><i class='bx bx-map'></i>123 Street, New York, USA</p>
+                    <p><i class='bx bx-envelope-open'></i>info@example.com</p>
+                    <p><i class='bx bxs-phone'></i>+012 345 67890</p>
+                </div>
+
+                <div class="foot_suber">
+
+                    <h3>Follow US</h3>
+
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-linkedin'></i>
+                    <i class='bx bxl-instagram'></i>
+
+                </div>
+
+            </div>
+
+            <div class="foot_leg">
+
+                <p>© <span>Ocean Bluwhale</span>. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+</body>
+<script src="{{ url_for('static', filename='script/cart.js')}}"></script>
+<script src="{{ url_for('static', filename='script/script.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</html>

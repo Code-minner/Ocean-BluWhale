@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Bluwhale</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/product_detail.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="section_one">
+
+            <div class="announcement-bar">
+                🚀 FREE Express Shipping on Orders Over $299 | 30-Day Money Back Guarantee
+            </div>
+
+            <header>
+
+                <div class="header_sub">
+
+
+                    <div class="logo">
+                        <a href="{{ url_for('main.home') }}">
+                            <img src="{{ url_for('static', filename='img/logo_blue_o.png') }}" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="search_bar">
+                        <input type="text" placeholder="Search for security products...">
+                        <i class="bx bx-search"></i>
+                    </div>
+
+                    <div class="nav_bar" id="navbar">
+
+                        <nav>
+                            <ul>
+
+                                <li>
+                                    <a href="{{ url_for('main.shop') }}">Products</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.about') }}">About Us</a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('main.contact') }}">Contact Us</a>
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+
+
+                    <div class="bar_icon_box">
+
+                        <div class="bar" onclick="toggleNavBar()">
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                            <span class="bar_sub"></span>
+                        </div>
+
+                        <div class="icon_box">
+                            <a href="{{ url_for('main.cart') }}">
+                                <i class='bx bx-cart Cart_icon' id="Cart_icon" data-quantity="0"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="section_one_sub">
+
+                <div class="section_one_sub_container">
+
+                    <div class="section_one_sub_container_text">
+                        <h2>{{ product.name }} Page</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section_two_product_main">
+
+            <div class="section_two_product_main_sub">
+
+                <div class="section_two_product_main_sub_container">
+
+                    <div class="card" data-id="{{ product.custom_id }}">
+
+                        <div class="card_img">
+                            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product_img">
+                        </div>
+
+                        <div class="card_text">
+                            <span class="cartigore">{{ product.category }}</span>
+
+                            <h3 class="product_title">{{ product.name }}</h3>
+                            <div class="icon_star">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+
+                            <div class="price_box">
+                                <h3 class="price">${{ product.price }}</h3>
+                            </div>
+
+
+                            <p class="Description">{{ product.description }}p>
+
+                            <p class="Description2">{{ product.description2 }}</p>
+
+                            <div class="add_to_cart add_cart">
+                                <span>Add To Cart</span>
+                                <i class='bx bx-cart'></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="section_three">
+
+            <div class="section_three_sub">
+
+                <header>
+                    <h2>New
+                        Arrivals
+                    </h2>
+                </header>
+
+                <div class="swiper-container card_swipers">
+
+                    <div class="swiper-wrapper pro">
+
+
+                        <a class="swiper-slide" href="{{ url_for('main.product_detail', name='Camera Power Bank') }}">
+
+                            <div class="card" data-id="product2">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/71L8mdDp0QL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                                        class="product_img">
+                                    <span class="spanner_two">-10%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>Camera</span>
+
+                                    <h3 class="product_title">Camera Power Bank</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$39</h3>
+                                    </div>
+
+                                    <div class="add_to_cart add_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        <a class="swiper-slide"
+                            href="{{ url_for('main.product_detail', name='Hidden Camera Detectors') }}">
+
+                            <div class="card" data-id="product3">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/71DdwayK+oL._AC_SY300_SX300_.jpg"
+                                        alt="" class="product_img">
+                                    <span class="spanner_three">-15%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>Detector</span>
+
+                                    <h3 class="product_title">Hidden Camera Detectors</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$358.44</h3>
+                                    </div>
+
+                                    <div class="add_to_cart add_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        <a class="swiper-slide" href="{{ url_for('main.product_detail', name='Invisible Ink Pen') }}">
+
+                            <div class="card" data-id="product4">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/61scnm+Bw6L._AC_SY300_SX300_.jpg"
+                                        alt="" class="product_img">
+                                    <span class="spanner_two">-10%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>pen</span>
+
+                                    <h3 class="product_title">Invisible Ink Pen</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$238.44</h3>
+                                    </div>
+
+                                    <div class="add_to_cart add_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                        <a class="swiper-slide" href="{{ url_for('main.product_detail', name='Monocular Telescope') }}">
+                            <div class="card" data-id="product5">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/71Cv0hIckCS.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+                                        alt="" class="product_img">
+                                    <span class="spanner_three">-15%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>Telescope</span>
+
+                                    <h3 class="product_title">Monocular Telescope</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$37.51</h3>
+                                    </div>
+
+                                    <div class="add_to_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        <a class="swiper-slide" href="{{ url_for('main.product_detail', name='Screen Body Camera') }}">
+
+                            <div class="card" data-id="product6">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/71ZHHWGi3bL._AC_SX425_.jpg" alt=""
+                                        class="product_img">
+                                    <span class="spanner_two">-10%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>Camera</span>
+
+                                    <h3 class="product_title">Screen Body Camera</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$238.44 </h3>
+                                    </div>
+
+                                    <div class="add_to_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        <a class="swiper-slide"
+                            href="{{ url_for('main.product_detail', name='HD Smart Glasses Recording') }}">
+
+                            <div class="card" data-id="product7">
+
+                                <div class="card_img">
+                                    <img src="https://m.media-amazon.com/images/I/51LkDtcfAZL._AC_SX425_.jpg" alt=""
+                                        class="product_img">
+                                    <span class="spanner_one">-20%</span>
+                                </div>
+
+                                <div class="card_text">
+                                    <span>Glasses</span>
+
+                                    <h3 class="product_title">HD Smart Glasses Recording</h3>
+
+                                    <div class="price_box">
+                                        <h3 class="price">$238.44 </h3>
+                                    </div>
+
+                                    <div class="add_to_cart">
+                                        <span>Add To Cart</span>
+                                        <i class='bx bx-cart add_cart'></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="next" id="next"><i class='bx bx-chevron-right'></i></div>
+                <div class="prev"><i class='bx bx-chevron-left'></i></div>
+
+            </div>
+
+            
+            <footer>
+
+                <div class="foot_sub">
+
+                    <div class="foot_suber">
+                        <ul>
+                            <h3>Quick Links</h3>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span class="linking">Home</span></a>
+                            </li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>cart</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Us</span></a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="foot_suber">
+                        <ul>
+                            <h3>Popular Links</h3>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Home</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>About</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Services</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Blog</span></a></li>
+                            <li><a href="#"><i class='bx bx-right-arrow-alt'></i><span>Contact Uss</span></a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="foot_suber">
+                        <h3>Get In Touch</h3>
+
+                        <p><i class='bx bx-map'></i>123 Street, New York, USA</p>
+                        <p><i class='bx bx-envelope-open'></i>info@example.com</p>
+                        <p><i class='bx bxs-phone'></i>+012 345 67890</p>
+                    </div>
+
+                    <div class="foot_suber">
+
+                        <h3>Follow US</h3>
+
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-facebook'></i>
+                        <i class='bx bxl-linkedin'></i>
+                        <i class='bx bxl-instagram'></i>
+
+                    </div>
+
+                </div>
+
+                <div class="foot_leg">
+
+                    <p>© <span>Ocean Bluwhale</span>. All Rights Reserved.</p>
+
+                </div>
+
+            </footer>
+
+
+        </div>
+
+
+        <script src="{{ url_for('static', filename='script/cart.js')}}"></script>
+        <script src="{{ url_for('static', filename='script/script.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+
+</html>
