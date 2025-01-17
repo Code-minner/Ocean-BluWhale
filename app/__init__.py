@@ -8,6 +8,7 @@ from config import DevelopmentConfig, ProductionConfig
 # Initialize extensions
 db = SQLAlchemy()
 bcrypt = Bcrypt()
+migrate = Migrate()  # Migrate instance should be initialized here
 
 def create_app():
     app = Flask(__name__)
@@ -22,7 +23,7 @@ def create_app():
     # Initialize extensions
     db.init_app(app)
     bcrypt.init_app(app)
-    Migrate(app, db)
+    migrate.init_app(app, db)  # Make sure to initialize Migrate with the app and db
 
     # Register blueprint
     from .routes import main
