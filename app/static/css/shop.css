@@ -189,8 +189,8 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    background: url(../img/3f0a24fdac3c0122c2881e2dbda7a569.jpg);
-    background-position: center;
+    background: url(../img/business-people-city-cyber-security-silhouettes-business-people-using-gadgets-city-double-exposure-online-160295750.webp);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0rem 0%;
@@ -681,7 +681,7 @@ footer {
 
 
     .section_one_sub_container_text h2 {
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 400;
     }
 

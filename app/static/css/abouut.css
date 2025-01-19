@@ -189,9 +189,10 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    background: url(../img/pexels-darlene-alderson-4389743_gugabe.jpg);
+    background: url('https://watermark.lovepik.com/photo/20211121/large/lovepik-mobile-technology-picture_500577776.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     padding: 0rem 0%;
 }
 
@@ -924,7 +925,7 @@ footer {
     }
 
     .section_one_sub_container_text h2 {
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 400;
     }
 

@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-console.log('what the fucking ness')
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const cardSwiper2 = new Swiper('.card_swipers', {
@@ -161,7 +161,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         breakpoints: {
 
-            300: {
+            580: {
+                slidesPerView: 1,
+            },
+
+            780: {
                 slidesPerView: 2,
             },
 

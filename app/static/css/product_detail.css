@@ -186,7 +186,7 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    background: url(../img/346059.jpg);
+    background: url(../img/Matter-MEA.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -749,6 +749,43 @@ height: 100%;
 
 }
 
+
+.next {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    opacity: 7;
+    font-size: 2rem;
+    padding: 7px 3px;
+    background-color: var(--span);
+    color: var(--tertiary_color);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    opacity: 7;
+    font-size: 2rem;
+    padding: 7px 3px;
+    color: var(--secondary-color);
+    background-color: var(--span);
+    margin-right: 3.5rem;
+    color: var(--tertiary_color);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     justify-section: center;
     align-items: center;
@@ -961,6 +998,19 @@ footer {
         padding: 1rem;
     }
 
+    .section_one_sub_container {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .foot_sub h3 {
+        font-size: 1.2em;
+    }
+
+    .section_two_product_main_sub {
+        padding: 3rem 5%;
+    }
+
     .announcement-bar {
         background: var(--tertiary_color);
         color: white;
@@ -975,7 +1025,7 @@ footer {
     }
 
     .product_title {
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 500;
         margin-bottom: 10px;
     }
@@ -999,6 +1049,11 @@ footer {
         font-weight: 400;
     }
 
+    .foot_sub h3 {
+        font-size: 1.2em;
+    }
+
+
     .foot_sub {
         grid-template-columns: auto;
     }
@@ -1010,7 +1065,5 @@ footer {
     .foot_leg p span {
         font-size: 1.3em;
     }
-
-
 
 }

@@ -80,7 +80,6 @@ function addCartClicked(event) {
     updateTotal();
 }
 
-console.log('what the fucking ness2')
 
 function addProductToCart(id, title, price, productImg) {
     var cartItems = JSON.parse(localStorage.getItem(cartKey)) || [];
